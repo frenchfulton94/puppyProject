@@ -20,6 +20,7 @@ var two = new Two({fullscreen: true}).appendTo(elem);
 
 var position = new Two.Vector(two.width/2, two.height/2);
 
+
 var head = two.makeCircle(position.x, position.y, 100);
 head.fill = '#52C5DC';
 head.noStroke();
@@ -69,6 +70,20 @@ tongue.translation.y = position.y+86;
 tongue.scale = 0.4;
 tongue.rotation = Math.PI / 5;
 two.update();
+
+
+    var rect = two.makeRectangle(260,120, 210,100);
+	rect.fill = '#6cbf58';
+	rect.stroke = '#ffffff';
+	rect.linewidth = 5;
+    
+	var line = two.makeLine(20,20, 210,300);
+	line.stroke = '#ff4c22';
+	line.linewidth = 8;
+
+
+    two.update();
+
 
 });
 
